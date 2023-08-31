@@ -21,7 +21,17 @@ namespace Datos
         public Nullable<System.DateTime> FechaVencimiento { get; set; }
         public int Estado { get; set; }
         public Nullable<int> idCategoria { get; set; }
-    
+
+        public Tarea()
+        {
+            this.FechaCreacion = DateTime.Today;
+        }
+
+        public override string ToString()
+        {
+            return this.Titulo;
+        }
+
         public virtual Categoria Categoria { get; set; }
     }
 }

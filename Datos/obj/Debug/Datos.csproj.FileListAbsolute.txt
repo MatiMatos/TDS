@@ -11,3 +11,4 @@ C:\Users\labinf\source\repos\Semana 5\Datos\obj\Debug\Datos.csproj.CoreCompileIn
 C:\Users\labinf\source\repos\Semana 5\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\labinf\source\repos\Semana 5\Datos\obj\Debug\Datos.dll
 C:\Users\labinf\source\repos\Semana 5\Datos\obj\Debug\Datos.pdb
+C:\Users\labinf\source\repos\Semana 5\Datos\obj\Debug\Datos.csprojAssemblyReference.cache

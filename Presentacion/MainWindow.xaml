@@ -5,12 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentacion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="502.941" Width="918.487">
+    <Grid Margin="0,0,-153,-31">
         <Label Content="Categorias" HorizontalAlignment="Left" Margin="21,26,0,0" VerticalAlignment="Top" Height="35" Width="98" FontSize="16" FontWeight="Bold"/>
-        <Label Content="Nueva Categoria" HorizontalAlignment="Left" Margin="20,78,0,0" VerticalAlignment="Top" Height="28" Width="99"/>
-        <TextBox x:Name="txtNuevaCategoria" HorizontalAlignment="Left" Height="23" Margin="20,106,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="65,144,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="Nueva Categoria" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Height="28" Width="99"/>
+        <TextBox x:Name="txtNuevaCategoria" HorizontalAlignment="Left" Height="23" Margin="33,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="94,116,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <ListBox x:Name="lstCategorias" HorizontalAlignment="Left" Height="250" Margin="36,159,0,0" VerticalAlignment="Top" Width="222"/>
+        <Label Content="Tareas" HorizontalAlignment="Left" Margin="230,33,0,0" VerticalAlignment="Top" Height="28" Width="120" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Titulo" HorizontalAlignment="Left" Margin="278,78,0,0" VerticalAlignment="Top" Height="23" Width="121"/>
+        <Label Content="Cuerpo" HorizontalAlignment="Left" Margin="278,110,0,0" VerticalAlignment="Top" Width="121"/>
+        <Label Content="Fecha de Creacion" HorizontalAlignment="Left" Margin="278,141,0,0" VerticalAlignment="Top" Height="26" Width="121"/>
+        <Label Content="Fecha de Vencimiento" HorizontalAlignment="Left" Margin="278,172,0,0" VerticalAlignment="Top" Height="26" Width="121"/>
+        <Label Content="Estado" HorizontalAlignment="Left" Margin="278,203,0,0" VerticalAlignment="Top" Height="26" Width="121"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="434,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="txtCuerpo" HorizontalAlignment="Left" Height="23" Margin="434,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+        <ComboBox x:Name="cmbEstado" HorizontalAlignment="Left" Margin="434,207,0,0" VerticalAlignment="Top" Width="140"/>
+        <DatePicker x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="434,174,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button x:Name="btnAgregarTarea" Content="Agregar" HorizontalAlignment="Left" Margin="499,251,0,0" VerticalAlignment="Top" Width="75" Click="BtnAgregarTarea_Click"/>
+        <ListBox x:Name="lstTareas" HorizontalAlignment="Left" Height="268" Margin="625,78,0,0" VerticalAlignment="Top" Width="240"/>
+        <DatePicker x:Name="dpFechaCreacion" HorizontalAlignment="Left" Margin="434,145,0,0" VerticalAlignment="Top" Width="140"/>
 
     </Grid>
 </Window>

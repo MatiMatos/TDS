@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Negocio;
+using Datos;
 
 namespace Presentacion
 {
@@ -21,10 +22,28 @@ namespace Presentacion
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Categoria
         CategoriaBLL catBLL = new CategoriaBLL();
+        //Tarea
+        TareaBLL taBLL = new TareaBLL();
         public MainWindow()
         {
             InitializeComponent();
+            CargarCategoria();
+            CargarTarea();
+            cmbEstado.ItemsSource = Enum.GetValues(typeof(Estado));
+        }
+
+        private void CargarCategoria()
+        {
+            lstCategorias.ItemsSource = null;
+            lstCategorias.ItemsSource = catBLL.GetAll();
+        }
+
+        private void CargarTarea()
+        {
+            lstTareas.ItemsSource = null;
+            lstTareas.ItemsSource = taBLL.GetAll();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -32,6 +51,22 @@ namespace Presentacion
             string categoria = txtNuevaCategoria.Text;
             //validar
             catBLL.Add(categoria);
+            //Mensaje
+
+            txtNuevaCategoria.Text = String.Empty;
+            CargarCategoria();
+        }
+
+        private void BtnAgregarTarea_Click(object sender, RoutedEventArgs e)
+        {
+            string titulo = txtTitulo.Text;
+            string cuerpo = txtCuerpo.Text;
+            DateTime fechaCreacion = (DateTime)dpFechaCreacion.SelectedDate;
+            int estado = (int)cmbEstado.SelectedValue;
+
+            taBLL.Add(titulo, cuerpo, fechaCreacion, estado);
+
+            CargarTarea();
         }
     }
 }
